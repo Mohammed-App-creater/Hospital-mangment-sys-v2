@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+
+    --colour-primary: #6c9BCF;
+    --colour-danger: #FF0060;
+    --colour-success: #1B9c85;
+    --colour-warning: #F7D600;
+    --colour-white: #fff;
+    --colour-info-dark: #7d8dal;
+    --colour-dark: #363949;
+    --colour-light: rgba(0, 0, 0, 0.18);
+    --colour-dark-variant: #677483;
+    --colour-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--colour-light);
+
+}
+
+
+.dark-mode-variables{
+
+    --colour-white: #202528;
+    --colour-info-dark: #7d8dal;
+    --colour-dark: #edeffd;
+    --colour-light: rgba(0, 0, 0, 0.4);
+    --colour-dark-variant: #a3bdcc;
+    --colour-background: #181a1e;
+
+    --box-shadow: 0 2rem 3rem var(--colour-light);
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--colour-background);
+}
