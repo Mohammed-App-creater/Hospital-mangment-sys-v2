@@ -18,9 +18,11 @@
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
     --border-radius-2: 1.2rem;
+    -o-border-radius-none: none;
 
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
+    --padding-2: 0.6rem;
 
     --box-shadow: 0 2rem 3rem var(--colour-light);
 
@@ -52,4 +54,79 @@
 
 body{
     background-color: var(--colour-background);
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--colour-dark);
+}
+
+p{
+    color:var(--colour-dark-variant);
+}
+
+@layer components{
+
+    .containers{
+        display: grid;
+        width: 96%;
+        margin: 0 auto;
+        gap: 1.8rem;
+        grid-template-columns: 12rem auto 23rem;
+    }
+
+    .HV{
+        height: 88vh;
+    }
+
+
+
+
+    .Hover:hover{
+        box-shadow: none;
+    }
+
+    .sidebar a:last-child{
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+     }
+
+     .sidebar a.active{
+        width: 100%;
+        color: var(--colour-primary);
+        background-color: var(--colour-light);
+        margin-left: 0;
+    }
+    
+    .sidebar a.active::before{
+        content: " ";
+        width: 6px;
+        height: 18px;
+        background-color: var(--colour-primary);
+    }
+    
+    .sidebar a.active span{
+        color: var(--colour-primary);
+        margin-left: 0;
+    }
+    
+   
+
+    .animation {
+        animation: showMenu 0.4s ease forwards;   
+    }
+
+    
+    
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+    }
+    
+    
+ 
 }

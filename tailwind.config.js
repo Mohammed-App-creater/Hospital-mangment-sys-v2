@@ -15,17 +15,19 @@ export default {
       background: "var(--colour-background)",
     },
     borderRadius: {
-        card: 'var(--card-border-radius)',
-        small: 'var(--border-radius-1)',
-        medium: 'var(--border-radius-2)',
-      },
-      padding: {
-        card: 'var(--card-padding)',
-        small: 'var(--padding-1)',
-      },
-      boxShadow: {
-        card: 'var(--box-shadow)',
-      },
+      card: "var(--card-border-radius)",
+      small: "var(--border-radius-1)",
+      medium: "var(--border-radius-2)",
+      none: "var(--border-radius-none)",
+    },
+    padding: {
+      card: "var(--card-padding)",
+      medium: "var(--padding-1)",
+      small: "var(--padding-2)",
+    },
+    boxShadow: {
+      card: "var(--box-shadow)",
+    },
     extend: {},
   },
   plugins: [],

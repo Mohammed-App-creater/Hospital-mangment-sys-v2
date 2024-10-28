@@ -1,51 +1,24 @@
+import MenuOption from "./MenuOption";
+
 const SideOptions = () => {
+  const Options = [
+    { icon: "dashboard", name: "Dashboard" },
+    { icon: "person_search", name: "Users" },
+    { icon: "person_add_alt_1", name: "Registartion" },
+    { icon: "receipt_long", name: "History" },
+    { icon: "insights", name: "Analiytics" },
+    { icon: "mail_outline", name: "Massage" },
+    { icon: "inventory", name: "Check List" },
+    { icon: "report_gmailerrorred", name: "Reports" },
+    { icon: "settings", name: "Setting" },
+    { icon: "add", name: "New Login" },
+    { icon: "logout", name: "Logout" },
+  ];
   return (
-    <div className=" bg-white">
-      <a href="#">
-        <span className="material-icons-sharp">dashboard</span>
-        <h3>Dashbord</h3>
-      </a>
-      <a href="#" className="person_search " id="person_search">
-        <span className="material-icons-sharp">person_search</span>
-        <h3>Users</h3>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">person_add_alt_1</span>
-        <h3>Registartion</h3>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">receipt_long</span>
-        <h3>History</h3>
-      </a>
-      <a href="#" className="active" id="Analyse">
-        <span className="material-icons-sharp">insights</span>
-        <h3>Analiytics</h3>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">mail_outline</span>
-        <h3>Massage</h3>
-        <span className="message-count">27</span>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">inventory</span>
-        <h3>Check List</h3>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">report_gmailerrorred</span>
-        <h3>Reports</h3>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">settings</span>
-        <h3>Setting</h3>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">add</span>
-        <h3>New Login</h3>
-      </a>
-      <a href="#">
-        <span className="material-icons-sharp">logout</span>
-        <h3>Logout</h3>
-      </a>
+    <div className=" md:shadow-card md:bg-white w-full md:w-20 lg:w-48 rounded-medium flex flex-col HV  top-6 relative  sidebar Hover ">
+      {Options.map((option, index) => (
+        <MenuOption key={index} icon={option.icon} name={option.name} />
+      ))}
     </div>
   );
 };
